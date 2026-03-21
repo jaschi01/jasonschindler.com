@@ -1,0 +1,9 @@
+<header class="site-header">
+  <div class="container">
+    <a href="{{ '/' | relative_url }}" class="site-logo">Jason <em>Schindler</em></a>
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>About</a>
+      <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a>
+    </nav>
+  </div>
+</header>

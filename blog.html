@@ -1,0 +1,32 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<div class="page-header">
+  <div class="container">
+    <p class="eyebrow">Writing</p>
+    <h1>Dev <em>Blog</em></h1>
+    <p class="tagline">Notes on Revit API, AutoCAD development, C#, and building engineering software.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    {% if site.posts.size > 0 %}
+    <div class="post-list">
+      {% for post in site.posts %}
+      <div class="post-item">
+        <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.tags %} &mdash; {{ post.tags | join: ", " }}{% endif %}</p>
+        <h3 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 35 }}</p>{% endif %}
+        <a href="{{ post.url | relative_url }}" class="read-more">Read more &rarr;</a>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p>Posts coming soon.</p>
+    {% endif %}
+  </div>
+</section>

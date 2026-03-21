@@ -1,0 +1,20 @@
+title: Jason Schindler
+description: Software developer specializing in AutoCAD and Revit add-ins for engineering applications.
+url: "https://jasonschindler.com"
+baseurl: ""
+
+author:
+  name: Jason Schindler
+  location: Raleigh, NC
+  email: jason@jasonschindler.com
+
+# Build
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+excerpt_separator: <!--more-->
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

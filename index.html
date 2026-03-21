@@ -1,290 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jason Schindler</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+---
+layout: default
+---
 
-    :root {
-      --bg: #faf9f7;
-      --text: #1a1917;
-      --muted: #6b6860;
-      --border: #e2e0da;
-      --accent: #2c5f8a;
-      --accent-light: #ddeaf4;
-    }
+<!-- ── Hero ── -->
+<div class="page-header">
+  <div class="container">
+    <p class="eyebrow">Raleigh, NC &mdash; Software Developer</p>
+    <h1>Jason<br /><em>Schindler</em></h1>
+    <p class="tagline">Building AutoCAD and Revit add-ins for engineering applications at Design Master Software.</p>
+  </div>
+</div>
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #141312;
-        --text: #f0ede8;
-        --muted: #908d85;
-        --border: #2a2926;
-        --accent: #7ab3d8;
-        --accent-light: #1a2d3a;
-      }
-    }
+<!-- ── About ── -->
+<section id="about">
+  <div class="container">
+    <h2>About</h2>
+    <p>
+      I'm a software developer based in Raleigh, NC, specializing in CAD and BIM add-in development. I've spent my career building tools that help mechanical, electrical, plumbing, and fire protection engineers work more efficiently inside AutoCAD and Autodesk Revit.
+    </p>
+    <p>
+      My work spans the full product lifecycle — from core calculation engines and drawing automation to UI design and Revit API integration. I enjoy solving the kinds of domain-specific problems that sit at the intersection of software engineering and building systems design.
+    </p>
+    <p>
+      Outside of work, I serve on the board of the North Carolina Episcopal Church Foundation, reviewing and approving grant applications across the state. When I'm not at a keyboard, I'm usually fishing or playing Quiddler with my family.
+    </p>
+  </div>
+</section>
 
-    html { font-size: 16px; scroll-behavior: smooth; }
+<!-- ── Products ── -->
+<section id="work">
+  <div class="container">
+    <h2>Products</h2>
+    <p>Software developer at <a href="https://www.designmaster.biz" target="_blank" rel="noopener noreferrer">Design Master Software</a>, contributing to the following products:</p>
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      line-height: 1.7;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* ── Layout ── */
-    .container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      width: 100%;
-    }
-
-    /* ── Header ── */
-    header {
-      padding: 4rem 0 3rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .eyebrow {
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(2.4rem, 6vw, 3.6rem);
-      font-weight: 400;
-      line-height: 1.1;
-      letter-spacing: -0.01em;
-      color: var(--text);
-    }
-
-    h1 em {
-      font-style: italic;
-      color: var(--accent);
-    }
-
-    .tagline {
-      margin-top: 1.25rem;
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 480px;
-      line-height: 1.6;
-    }
-
-    /* ── Navigation ── */
-    nav {
-      display: flex;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    nav a {
-      font-size: 0.875rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    nav a:hover { color: var(--text); }
-
-    /* ── Sections ── */
-    main { flex: 1; padding: 0; }
-
-    section {
-      padding: 3.5rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    section:last-child { border-bottom: none; }
-
-    h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-      color: var(--text);
-    }
-
-    p { color: var(--muted); margin-bottom: 1rem; }
-    p:last-child { margin-bottom: 0; }
-
-    /* ── Interests list ── */
-    .interests {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 0.5rem;
-    }
-
-    .tag {
-      font-size: 0.85rem;
-      padding: 0.35rem 0.85rem;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      color: var(--muted);
-    }
-
-    /* ── Contact ── */
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      margin-top: 0.5rem;
-    }
-
-    .contact-link {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 0.95rem;
-      transition: color 0.2s;
-    }
-
-    .contact-link:hover { color: var(--text); }
-
-    .contact-link .icon {
-      width: 36px;
-      height: 36px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 1rem;
-    }
-
-    /* ── Footer ── */
-    footer {
-      padding: 2rem 0;
-      border-top: 1px solid var(--border);
-    }
-
-    footer p {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    /* ── Animations ── */
-    @media (prefers-reduced-motion: no-preference) {
-      header, section {
-        animation: fade-up 0.5s ease both;
-      }
-      section:nth-of-type(1) { animation-delay: 0.05s; }
-      section:nth-of-type(2) { animation-delay: 0.1s; }
-      section:nth-of-type(3) { animation-delay: 0.15s; }
-      section:nth-of-type(4) { animation-delay: 0.2s; }
-
-      @keyframes fade-up {
-        from { opacity: 0; transform: translateY(16px); }
-        to   { opacity: 1; transform: translateY(0); }
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- ── Header ── -->
-  <header>
-    <div class="container">
-      <p class="eyebrow">Raleigh, NC</p>
-      <h1>Jason<br /><em>Schindler</em></h1>
-      <p class="tagline">Software developer building tools at the intersection of engineering and construction technology.</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#interests">Interests</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- ── About ── -->
-    <section id="about">
-      <div class="container">
-        <h2>About</h2>
-        <p>
-          I'm a software developer based in Raleigh, NC, specializing in Revit add-ins and building information modeling (BIM) tools. I build software that helps electrical engineers work more efficiently inside Autodesk Revit — from panel schedules to one-line diagrams.
-        </p>
-        <p>
-          Outside of code, I'm a board member of the North Carolina Episcopal Church Foundation, where I help review and approve grant applications supporting communities across NC.
-        </p>
-        <p>
-          I live in Raleigh with my family. When I'm not building software, you'll find me fishing, playing Quiddler, or tinkering with my home lab.
-        </p>
-      </div>
-    </section>
-
-    <!-- ── Interests ── -->
-    <section id="interests">
-      <div class="container">
-        <h2>Interests</h2>
-        <p>A few things I enjoy beyond the day job.</p>
-        <div class="interests">
-          <span class="tag">Fishing</span>
-          <span class="tag">Home lab & self-hosting</span>
-          <span class="tag">Raspberry Pi</span>
-          <span class="tag">Card games</span>
-          <span class="tag">Reading with my kid</span>
-          <span class="tag">Sports betting</span>
-          <span class="tag">Web tinkering</span>
+    <div class="product-group" style="margin-top: 1.5rem;">
+      <p class="product-group-label">AutoCAD Add-ins</p>
+      <div class="product-list">
+        <div class="product-item">
+          <span class="product-name">Design Master Electrical</span>
+          <span class="product-badge">AutoCAD</span>
+        </div>
+        <div class="product-item">
+          <span class="product-name">Design Master HVAC</span>
+          <span class="product-badge">AutoCAD</span>
+        </div>
+        <div class="product-item">
+          <span class="product-name">Design Master Photometrics</span>
+          <span class="product-badge">AutoCAD</span>
+        </div>
+        <div class="product-item">
+          <span class="product-name">Design Master Plumbing</span>
+          <span class="product-badge">AutoCAD &mdash; Legacy</span>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- ── Contact ── -->
-    <section id="contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Feel free to reach out — I'm always happy to talk software, BIM, or fishing spots.</p>
-        <div class="contact-links">
-          <a class="contact-link" href="mailto:jason@jasonschindler.com">
-            <span class="icon">✉</span>
-            jason@jasonschindler.com
-          </a>
-          <a class="contact-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">
-            <span class="icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            </span>
-            GitHub
-          </a>
-          <a class="contact-link" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
-            <span class="icon">in</span>
-            LinkedIn
-          </a>
+    <div class="product-group">
+      <p class="product-group-label">Revit Add-ins</p>
+      <div class="product-list">
+        <div class="product-item">
+          <span class="product-name">ElectroBIM</span>
+          <span class="product-badge">Revit</span>
+        </div>
+        <div class="product-item">
+          <span class="product-name">FireBIM</span>
+          <span class="product-badge">Revit &mdash; Beta</span>
         </div>
       </div>
-    </section>
-
-  </main>
-
-  <!-- ── Footer ── -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Jason Schindler &mdash; Raleigh, NC</p>
     </div>
-  </footer>
+  </div>
+</section>
 
-</body>
-</html>
+<!-- ── Skills ── -->
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="interests">
+      <span class="tag">C# / .NET</span>
+      <span class="tag">Revit API</span>
+      <span class="tag">AutoCAD API</span>
+      <span class="tag">WPF / XAML</span>
+      <span class="tag">SQL</span>
+      <span class="tag">Visual Studio</span>
+      <span class="tag">SVN / Git</span>
+      <span class="tag">BIM</span>
+      <span class="tag">MEP Engineering</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Recent Posts ── -->
+<section id="writing">
+  <div class="container">
+    <h2>Recent writing</h2>
+    {% assign recent_posts = site.posts | limit: 3 %}
+    {% if recent_posts.size > 0 %}
+    <div class="post-list">
+      {% for post in recent_posts %}
+      <div class="post-item">
+        <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <h3 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>{% endif %}
+        <a href="{{ post.url | relative_url }}" class="read-more">Read more &rarr;</a>
+      </div>
+      {% endfor %}
+    </div>
+    <p style="margin-top: 1.5rem;"><a href="{{ '/blog/' | relative_url }}">View all posts &rarr;</a></p>
+    {% else %}
+    <p>Posts coming soon.</p>
+    {% endif %}
+  </div>
+</section>
+
+<!-- ── Contact ── -->
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Happy to talk software, Revit API, AutoCAD development, or fishing spots.</p>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:jason@jasonschindler.com">
+        <span class="icon">✉</span>
+        jason@jasonschindler.com
+      </a>
+      <a class="contact-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        <span class="icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </span>
+        GitHub
+      </a>
+      <a class="contact-link" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+        <span class="icon" style="font-size:0.8rem;font-weight:500;">in</span>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
