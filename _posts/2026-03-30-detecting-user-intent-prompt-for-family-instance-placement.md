@@ -2,7 +2,7 @@
 layout: post
 title: "Did the User Actually Place Anything? Detecting Intent After PromptForFamilyInstancePlacement"
 date: 2026-03-30
-categories: [revit-api, c-sharp]
+categories: [Revit, C#]
 tags: [revit, api, families, events, uiDocument]
 ---
 
